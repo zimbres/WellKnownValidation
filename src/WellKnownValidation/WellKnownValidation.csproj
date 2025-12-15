@@ -8,7 +8,7 @@
     <DockerfileContext>..\..</DockerfileContext>
 	<AssemblyVersion>$(PackageVersion)</AssemblyVersion>
 	<FileVersion>$(PackageVersion)</FileVersion>
-	<Version>1.0.0.1</Version>
+	<Version>1.0.0.2</Version>
 	<Title>WellKnown Validation</Title>
 	<Authors>zimbres</Authors>
 	<Company>Zimbres.COM</Company>
