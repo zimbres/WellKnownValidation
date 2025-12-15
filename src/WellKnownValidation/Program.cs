@@ -6,7 +6,9 @@ builder.Services.AddLogging();
 builder.Services.Configure<ForwardedHeadersOptions>(options =>
 {
     options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
-    options.KnownProxies.Clear();
+    options.KnownIPNetworks.Add(System.Net.IPNetwork.Parse("10.0.0.0/8")); // Private Class A network
+    options.KnownIPNetworks.Add(System.Net.IPNetwork.Parse("172.16.0.0/12")); // Private Class B network
+    options.KnownIPNetworks.Add(System.Net.IPNetwork.Parse("192.168.0.0/16")); // Private Class C network
 });
 var app = builder.Build();
 app.UseForwardedHeaders();
