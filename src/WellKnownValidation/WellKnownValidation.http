@@ -1,0 +1,13 @@
+@WellKnownValidation_HostAddress = http://localhost:5139
+
+GET {{WellKnownValidation_HostAddress}}/.well-known/pki-validation/8L0Zoi6YXd38.txt
+Accept: application/json
+
+###
+
+POST {{WellKnownValidation_HostAddress}}/.well-known/set/pki-validation/8L0Zoi6YXd38.txt
+Accept: application/json
+
+{
+  "data": "PwB3RH928EGG comodoca.com SnQVYF4T981i"
+}
